@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Calendars - SaeidRnb</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- I just create theme for this calendar -->
+    <link href="themes/white/j.c.picker.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+      
+        <h2>Converter is absolute</h2>
+        <hr/>
+        <div class="row" id="dateConverter">
+            <div class="col-sm-3">
+                <label class="control-label">gregorian</label>
+                <input type="text" name="gregorianDate" class="gregorianDate form-control" value="میلادی">
+            </div>
+            <div class="col-sm-3">
+                <label class="control-label">jalaliDate</label>
+                <input type="text" name="jalaliDate" class="jalaliDate form-control" value="شمسی">
+            </div>
+            <div class="col-sm-3">
+                <label class="control-label">hijriDate</label>
+                <input type="text" name="hijriDate" class="hijriDate form-control" value="قمری">
+            </div>
+            <div class="col-sm-3">
+                <label class="control-label" style="display: block">&nbsp;</label>
+                <button class="btn btn-primary" id="doConvert" type="button">convert</button>
+            </div>
+        </div>
+        <hr/>
+        <a href="index.html" class="btn btn-primary">Back to home</a>
+
+    </div>
+    
+    
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+
+    <script src="js/jquery.plugin.js"></script>
+    <script src="js/jquery.calendars.js"></script>
+    <script src="js/jquery.calendars.plus.js"></script>
+    <script src="js/jquery.calendars.picker.js"></script>
+    <script src="js/calendar.js"></script>
+
+    <script src="js/converter.js"></script>
+
+</body>
+</html>

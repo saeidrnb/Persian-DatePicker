@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Calendars - SaeidRnb</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- I just create theme for this calendar -->
+    <link href="themes/white/j.c.picker.css" rel="stylesheet" />
+    <style>
+        .btn-black {
+            background-color: #1A1A1A;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Jquery calendar theme  <small>white theme</small></h2>
+        <hr/>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label">Jalali date </label>
+                    <input type="text" class="form-control jalaliDate" placeholder="yyyy/mm/dd" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label">gregorian date </label>
+                    <input type="text" class="form-control gregorianDate" placeholder="yyyy/mm/dd" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-6">
+               
+                <code>
+                    &lt;div class="form-group"&gt;<br />
+                    &lt;label class="control-label">Jalali date &lt;/label&gt;<br />
+                    &lt;input type="text" class="form-control jalaliDate" placeholder="yyyy/mm/dd" /&gt;<br />
+                    &lt;/div&gt;<br />
+                </code>
+                <br/>
+                <br/>
+                <label class="control-label">you can use this class for add datepicker for textbox</label>
+                <code>
+                    .jalaliDate
+                </code>
+                <br/>
+                <br/>
+                <label class="control-label">script for jalali datepicker</label>
+                <br />
+                
+                <code>
+                    $('.jalaliDate').calendarsPicker({<br/>
+                    calendar: $.calendars.instance('persian'), dateFormat: 'yyyy/m/d',<br/>
+                    yearRange: '1330:1400',
+                    });
+                </code>
+            </div>
+            
+            <div class="col-sm-6">
+
+                <code>
+                    &lt;div class="form-group"&gt;<br />
+                    &lt;label class="control-label">gregorian date &lt;/label&gt;<br />
+                    &lt;input type="text" class="form-control gregorianDate" placeholder="yyyy/mm/dd" /&gt;<br />
+                    &lt;/div&gt;<br />
+                </code>
+                <br />
+                <br />
+                <label class="control-label">you can use this class for add datepicker for textbox</label>
+                <code>
+                    .gregorianDate
+                </code>
+                <br />
+                <br />
+                <label class="control-label">script for gregorianDate datepicker</label>
+                <br />
+
+                <code>
+                    $('.gregorianDate').calendarsPicker({<br/>
+                    dateFormat: 'yyyy/m/d', yearRange: '1970:2020',<br/>
+                    });
+                </code>
+            </div>
+        </div>
+        <hr/>
+        <a href="black.html" class="btn btn-default btn-black">And see black theme</a>
+        <a href="conveter.html" class="btn btn-primary">Date converter</a>
+        </div>
+    
+    
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+
+    <script src="js/jquery.plugin.js"></script>
+    <script src="js/jquery.calendars.js"></script>
+    <script src="js/jquery.calendars.plus.js"></script>
+    <script src="js/jquery.calendars.picker.js"></script>
+    <script src="js/calendar.js"></script>
+    
+    
+    <script type="text/javascript">
+
+        $(function () {
+
+            $('.gregorianDate').calendarsPicker({
+                dateFormat: 'yyyy/m/d', yearRange: '1970:2020',
+            });
+            $('.jalaliDate').calendarsPicker({
+                calendar: $.calendars.instance('persian'), dateFormat: 'yyyy/m/d', yearRange: '1330:1400',
+            });
+        });
+
+
+    </script>
+</body>
+</html>
